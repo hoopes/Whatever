@@ -12,12 +12,12 @@ import SwiftUI
 struct ContentView: View {
 
     @EnvironmentObject var appState: AppState
-
+    @EnvironmentObject var acct: Account
 
     var body: some View {
         VStack {
             Text("EMAIL")
-            Text(appState.account.email)
+            Text(acct.email)
         }
     }
 }

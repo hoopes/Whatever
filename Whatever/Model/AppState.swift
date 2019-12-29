@@ -10,12 +10,12 @@ import Foundation
 
 class AppState: ObservableObject {
 
-    @Published var account: Account
+//    @Published var account: Account
     @Published var initialized: Bool = false
 
     init() {
-        self.account = Account()
-        self.account.load()
+//        self.account = Account()
+//        self.account.load()
     }
 
 }
