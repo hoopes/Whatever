@@ -12,12 +12,18 @@ import SwiftUI
 struct ContentView: View {
 
     @EnvironmentObject var appState: AppState
-    @EnvironmentObject var acct: Account
 
     var body: some View {
         VStack {
             Text("EMAIL")
-            Text(acct.email)
+            Text(appState.account.email)
+
+            if appState.initialized {
+                Text("INITIALIZED")
+            }
+            else {
+                Text("NOT YET INITIALIZED")
+            }
         }
     }
 }
