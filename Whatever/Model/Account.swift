@@ -9,7 +9,6 @@
 import Foundation
 
 class Account {
-//    @Published var email: String  = "default..."
     var email: String  = "default..."
 
     // Do something here

@@ -17,13 +17,6 @@ struct ContentView: View {
         VStack {
             Text("EMAIL")
             Text(appState.account.email)
-
-            if appState.initialized {
-                Text("INITIALIZED")
-            }
-            else {
-                Text("NOT YET INITIALIZED")
-            }
         }
     }
 }
