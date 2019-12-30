@@ -15,8 +15,27 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
-            Text("EMAIL")
-            Text(appState.account.email)
+
+            if (self.appState.initialized) {
+                Text("EMAIL")
+                Text(self.appState.account.email)
+                Text(self.appState.account.phoneNumber.number)
+
+                Button(action: {
+                    self.appState.account.toggleEmail()
+                }) {
+                    Text("email")
+                }
+
+                Button(action: {
+                    self.appState.account.togglePhone()
+                }) {
+                    Text("phone")
+                }
+            }
+            else {
+                Text("LOADING")
+            }
         }
     }
 }
