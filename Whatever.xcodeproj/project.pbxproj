@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D0AC72023C1617800623340 /* ProjectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0AC71F23C1617800623340 /* ProjectManager.swift */; };
+		1D0AC72323C162E900623340 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0AC72223C162E900623340 /* Project.swift */; };
+		1D0AC72523C16CFC00623340 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0AC72423C16CFC00623340 /* AudioManager.swift */; };
+		1D0AC72823C1705100623340 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D0AC72723C1705100623340 /* AudioKit.framework */; };
+		1D0AC72923C1705100623340 /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1D0AC72723C1705100623340 /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1D0AC72E23C17C6200623340 /* StudioRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0AC72D23C17C6200623340 /* StudioRootView.swift */; };
+		1D0AC73123C17EBA00623340 /* AppLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0AC73023C17EBA00623340 /* AppLoading.swift */; };
 		1DA451C223B913C900938CCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA451C123B913C900938CCF /* AppDelegate.swift */; };
 		1DA451C423B913C900938CCF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA451C323B913C900938CCF /* SceneDelegate.swift */; };
 		1DA451C623B913C900938CCF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA451C523B913C900938CCF /* ContentView.swift */; };
@@ -17,6 +24,7 @@
 		1DA451E423B913CA00938CCF /* WhateverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA451E323B913CA00938CCF /* WhateverUITests.swift */; };
 		1DA451F323B913F800938CCF /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA451F223B913F800938CCF /* Account.swift */; };
 		1DA451F523B9145600938CCF /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA451F423B9145600938CCF /* AppState.swift */; };
+		1DA451F723B9225400938CCF /* PhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA451F623B9225400938CCF /* PhoneNumber.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +44,27 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		1D0AC72A23C1705100623340 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1D0AC72923C1705100623340 /* AudioKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1D0AC71F23C1617800623340 /* ProjectManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectManager.swift; sourceTree = "<group>"; };
+		1D0AC72223C162E900623340 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		1D0AC72423C16CFC00623340 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		1D0AC72723C1705100623340 /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioKit.framework; path = Carthage/Build/iOS/Static/AudioKit.framework; sourceTree = "<group>"; };
+		1D0AC72D23C17C6200623340 /* StudioRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioRootView.swift; sourceTree = "<group>"; };
+		1D0AC73023C17EBA00623340 /* AppLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLoading.swift; sourceTree = "<group>"; };
 		1DA451BE23B913C900938CCF /* Whatever.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whatever.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DA451C123B913C900938CCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DA451C323B913C900938CCF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +81,7 @@
 		1DA451E523B913CA00938CCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DA451F223B913F800938CCF /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		1DA451F423B9145600938CCF /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		1DA451F623B9225400938CCF /* PhoneNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumber.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D0AC72823C1705100623340 /* AudioKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +110,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D0AC71D23C15F1F00623340 /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				1D0AC71F23C1617800623340 /* ProjectManager.swift */,
+				1D0AC72223C162E900623340 /* Project.swift */,
+			);
+			path = Project;
+			sourceTree = "<group>";
+		};
+		1D0AC71E23C15F4700623340 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				1DA451F223B913F800938CCF /* Account.swift */,
+				1DA451F623B9225400938CCF /* PhoneNumber.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		1D0AC72123C1626600623340 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				1D0AC72423C16CFC00623340 /* AudioManager.swift */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		1D0AC72623C1705100623340 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D0AC72723C1705100623340 /* AudioKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1D0AC72B23C17C3600623340 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1D0AC72F23C17EA600623340 /* AppLoading */,
+				1D0AC72C23C17C4000623340 /* Studio */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1D0AC72C23C17C4000623340 /* Studio */ = {
+			isa = PBXGroup;
+			children = (
+				1D0AC72D23C17C6200623340 /* StudioRootView.swift */,
+			);
+			path = Studio;
+			sourceTree = "<group>";
+		};
+		1D0AC72F23C17EA600623340 /* AppLoading */ = {
+			isa = PBXGroup;
+			children = (
+				1D0AC73023C17EBA00623340 /* AppLoading.swift */,
+			);
+			path = AppLoading;
+			sourceTree = "<group>";
+		};
 		1DA451B523B913C900938CCF = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +176,7 @@
 				1DA451D723B913CA00938CCF /* WhateverTests */,
 				1DA451E223B913CA00938CCF /* WhateverUITests */,
 				1DA451BF23B913C900938CCF /* Products */,
+				1D0AC72623C1705100623340 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +193,7 @@
 		1DA451C023B913C900938CCF /* Whatever */ = {
 			isa = PBXGroup;
 			children = (
+				1D0AC72B23C17C3600623340 /* Views */,
 				1DA451F123B913E700938CCF /* Model */,
 				1DA451C123B913C900938CCF /* AppDelegate.swift */,
 				1DA451C323B913C900938CCF /* SceneDelegate.swift */,
@@ -144,7 +235,9 @@
 		1DA451F123B913E700938CCF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				1DA451F223B913F800938CCF /* Account.swift */,
+				1D0AC72123C1626600623340 /* Audio */,
+				1D0AC71D23C15F1F00623340 /* Project */,
+				1D0AC71E23C15F4700623340 /* Account */,
 				1DA451F423B9145600938CCF /* AppState.swift */,
 			);
 			path = Model;
@@ -160,6 +253,7 @@
 				1DA451BA23B913C900938CCF /* Sources */,
 				1DA451BB23B913C900938CCF /* Frameworks */,
 				1DA451BC23B913C900938CCF /* Resources */,
+				1D0AC72A23C1705100623340 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -286,6 +380,12 @@
 				1DA451F323B913F800938CCF /* Account.swift in Sources */,
 				1DA451C423B913C900938CCF /* SceneDelegate.swift in Sources */,
 				1DA451C623B913C900938CCF /* ContentView.swift in Sources */,
+				1D0AC72023C1617800623340 /* ProjectManager.swift in Sources */,
+				1D0AC72E23C17C6200623340 /* StudioRootView.swift in Sources */,
+				1D0AC73123C17EBA00623340 /* AppLoading.swift in Sources */,
+				1DA451F723B9225400938CCF /* PhoneNumber.swift in Sources */,
+				1D0AC72523C16CFC00623340 /* AudioManager.swift in Sources */,
+				1D0AC72323C162E900623340 /* Project.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +554,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Whatever/Preview Content\"";
 				DEVELOPMENT_TEAM = Y689F68ZJ8;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/Static",
+				);
 				INFOPLIST_FILE = Whatever/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -474,6 +578,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Whatever/Preview Content\"";
 				DEVELOPMENT_TEAM = Y689F68ZJ8;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/Static",
+				);
 				INFOPLIST_FILE = Whatever/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

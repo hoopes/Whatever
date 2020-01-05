@@ -8,17 +8,27 @@
 
 import SwiftUI
 
-
 struct ContentView: View {
 
     @EnvironmentObject var appState: AppState
 
-
     var body: some View {
-        VStack {
-            Text("EMAIL")
-            Text(appState.account.email)
+        VStack() { // what more general view can i use here?
+
+            // kinda ugly, anything better?
+            if (appState.initialized) {
+                StudioRootView()
+            } else {
+                AppLoading()
+            }
+
         }
+        .frame(minWidth: 0,
+               maxWidth: .infinity,
+               minHeight: 0,
+               maxHeight: .infinity,
+               alignment: Alignment.topLeading)
+        .border(Color.red)
     }
 }
 
