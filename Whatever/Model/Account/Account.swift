@@ -10,17 +10,35 @@ import Foundation
 import Combine
 
 class Account: ObservableObject {
-    let email1 = "matthew.hoopes@gmail.com"
-    let email2 = "delosaelizabeth@gmail.com"
 
-    let phone1 = "phone1"
-    let phone2 = "phone2"
 
-    @Published var initialized: Bool = false
-    @Published var email: String  = "default..."
 
     var phoneNumber: PhoneNumber = PhoneNumber()
 
+    let email1 = "matthew.hoopes@gmail.com"
+    let email2 = "delosaelizabeth@gmail.com"
+
+    let emails = [
+        "email1",
+        "email2"
+    ]
+
+
+    var _acctInitialized: Bool = false
+
+//    @Published var initialized: Bool = false
+    var initialized: Bool {
+        return self._acctInitialized && self.phoneNumber.initialized
+    }
+
+    @Published var currEmail: String  = "default..."
+
+    var email: String? {
+        willSet {
+            currEmail = email ?? "NO EMAIL"
+        }
+    }
+    
     var phoneNumberCancellable: AnyCancellable? = nil
 
     init() {
@@ -28,14 +46,19 @@ class Account: ObservableObject {
     }
 
     // Do something here
+    // Get all subscriptions the account has access to
+    // Load email, account name, etc - where does this come from?
     func load() {
+
+        self.phoneNumber.load()
+
         let seconds = 2.0
         print("Starting account load...")
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
             print("Finished account load...")
             self.email = self.email1
 
-            self.phoneNumber.number = "hot new shit"
+            self._acctInitialized = true
         }
     }
 
@@ -46,10 +69,7 @@ class Account: ObservableObject {
     }
 
     func togglePhone() {
-        self.phoneNumber.number = self.phoneNumber.number == self.phone1 ? self.phone2 : self.phone1
-
-        print ("PHONE NOW: ")
-        print (self.phoneNumber.number)
+        self.phoneNumber.toggle()
     }
 
     func toggleEmail() {
@@ -61,7 +81,7 @@ class Account: ObservableObject {
         }
 
         print ("EMAIL ADDR NOW: ")
-        print (self.email)
+        print (self.email!)
     }
 }
 

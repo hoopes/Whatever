@@ -8,35 +8,27 @@
 
 import SwiftUI
 
-
 struct ContentView: View {
 
     @EnvironmentObject var appState: AppState
 
     var body: some View {
-        VStack {
+        VStack() { // what more general view can i use here?
 
-            if (self.appState.initialized) {
-                Text("EMAIL")
-                Text(self.appState.account.email)
-                Text(self.appState.account.phoneNumber.number)
-
-                Button(action: {
-                    self.appState.account.toggleEmail()
-                }) {
-                    Text("email")
-                }
-
-                Button(action: {
-                    self.appState.account.togglePhone()
-                }) {
-                    Text("phone")
-                }
+            // kinda ugly, anything better?
+            if (appState.initialized) {
+                StudioRootView()
+            } else {
+                AppLoading()
             }
-            else {
-                Text("LOADING")
-            }
+
         }
+        .frame(minWidth: 0,
+               maxWidth: .infinity,
+               minHeight: 0,
+               maxHeight: .infinity,
+               alignment: Alignment.topLeading)
+        .border(Color.red)
     }
 }
 
